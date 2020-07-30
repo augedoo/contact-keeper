@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const { check, validationResult } = require('express-validator');
 
 const User = require('../models/User');
 
@@ -67,6 +67,7 @@ router.post(
         },
         (err, token) => {
           if (err) throw err;
+          // Todo: create middleware to extract the id from the token thats sent in the header
           res.json({ token });
         }
       );
