@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import uuid from 'uuid';
 import ContactContext from './contactContext';
-import ContactReducer from './contactReducer';
+import contactReducer from './contactReducer';
 import {
   ADD_CONTACT,
   DELETE_CONTACT,
@@ -12,8 +12,8 @@ import {
   CLEAR_FILTER,
 } from './../types';
 
-// Create initial state
 const ContactState = (props) => {
+  // Create initial state
   const initialState = {
     contacts: [
       {
@@ -43,7 +43,7 @@ const ContactState = (props) => {
   };
 
   // Init Reducer
-  const [state, dispatch] = useReducer(ContactReducer, initialState);
+  const [state, dispatch] = useReducer(contactReducer, initialState);
 
   //===============
   // Actions
