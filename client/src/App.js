@@ -10,7 +10,13 @@ import Alerts from './components/layouts/Alerts';
 import ContactState from './context/contacts/ContactState';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
+import setAuthToken from './utils/setAuthToken';
 import './App.css';
+
+//Load token from global headers everytime the main component loads
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 const App = () => {
   return (
