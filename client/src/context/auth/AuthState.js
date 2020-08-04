@@ -11,7 +11,6 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   CLEAR_ERRORS,
-  CLEAR_CURRENT,
   LOGOUT,
 } from '../types';
 
@@ -37,7 +36,6 @@ const AuthState = (props) => {
     //Load token from global headers
     if (localStorage.token) {
       setAuthToken(localStorage.token);
-      console.log(localStorage.token);
     }
 
     try {
