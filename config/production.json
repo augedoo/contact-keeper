@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://augedoo:augedoo@contactkeeper.xitsy.mongodb.net/ContactKeeper?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
